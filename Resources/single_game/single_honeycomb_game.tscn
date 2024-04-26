@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8jktormeiec1"]
+
+[ext_resource type="PackedScene" uid="uid://bd688vrs30ors" path="res://Resources/Prototype/single_game.tscn" id="1_vkbmd"]
+[ext_resource type="Script" path="res://Resources/single_game/single_honeycomb_game.gd" id="2_88vnk"]
+
+[node name="single_honeycomb_game" instance=ExtResource("1_vkbmd")]
+script = ExtResource("2_88vnk")
+
+[node name="score_box" parent="ui/score_panel" index="0"]
+layout_mode = 2
+
+[node name="left_mid_bracket" parent="ui/score_panel/score_box" index="0"]
+layout_mode = 2
+
+[node name="time" parent="ui/score_panel/score_box" index="1"]
+layout_mode = 2
+
+[node name="right_mid_bracket" parent="ui/score_panel/score_box" index="2"]
+layout_mode = 2
+
+[node name="flaged_label" parent="ui/score_panel/score_box" index="3"]
+layout_mode = 2
+
+[node name="flaged" parent="ui/score_panel/score_box" index="4"]
+layout_mode = 2
+
+[node name="separator" parent="ui/score_panel/score_box" index="5"]
+layout_mode = 2
+
+[node name="mine_number" parent="ui/score_panel/score_box" index="6"]
+layout_mode = 2
+
+[node name="space" parent="ui/score_panel/score_box" index="7"]
+layout_mode = 2
+
+[node name="restart" parent="ui/score_panel/score_box" index="8"]
+layout_mode = 2
+
+[node name="quit" parent="ui/score_panel/score_box" index="9"]
+layout_mode = 2
+
+[node name="game_state_box" parent="ui/score_panel" index="1"]
+layout_mode = 2
+
+[node name="game_state" parent="ui/score_panel/game_state_box" index="0"]
+layout_mode = 2

@@ -1,0 +1,77 @@
+[gd_scene load_steps=2 format=3 uid="uid://cq8v7kniragju"]
+
+[ext_resource type="Script" path="res://Resources/Prototype/tab.gd" id="1_8h3ca"]
+
+[node name="tab" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8h3ca")
+
+[node name="size_option_box" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="size_option_label" type="Label" parent="size_option_box"]
+layout_mode = 2
+text = "TK_squares_size_option"
+
+[node name="size_option" type="OptionButton" parent="size_option_box"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="size_box" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="size_x_label" type="Label" parent="size_box"]
+layout_mode = 2
+text = "TK_length"
+
+[node name="size_x" type="SpinBox" parent="size_box"]
+unique_name_in_owner = true
+layout_mode = 2
+min_value = 2.0
+value = 2.0
+allow_greater = true
+editable = false
+
+[node name="size_y_label" type="Label" parent="size_box"]
+layout_mode = 2
+text = "TK_width"
+
+[node name="size_y" type="SpinBox" parent="size_box"]
+unique_name_in_owner = true
+layout_mode = 2
+min_value = 2.0
+value = 2.0
+allow_greater = true
+editable = false
+
+[node name="mine_number_label" type="Label" parent="size_box"]
+layout_mode = 2
+text = "TK_mine_number"
+
+[node name="mine_number" type="SpinBox" parent="size_box"]
+unique_name_in_owner = true
+layout_mode = 2
+min_value = 1.0
+value = 1.0
+allow_greater = true
+editable = false
+
+[node name="zoom_box" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="zoom_label" type="Label" parent="zoom_box"]
+layout_mode = 2
+text = "TK_zoom"
+
+[node name="zoom" type="SpinBox" parent="zoom_box"]
+unique_name_in_owner = true
+layout_mode = 2
+step = 0.01
+value = 1.0
+
+[connection signal="item_selected" from="size_option_box/size_option" to="." method="_on_size_option_item_selected"]

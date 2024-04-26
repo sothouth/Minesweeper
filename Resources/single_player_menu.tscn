@@ -1,0 +1,134 @@
+[gd_scene load_steps=8 format=3 uid="uid://dovj2lwkojuxs"]
+
+[ext_resource type="Theme" uid="uid://crk82bkjei1ly" path="res://Assets/Themes/themeMain.tres" id="1_36ids"]
+[ext_resource type="Script" path="res://Resources/single_player_menu.gd" id="2_owr67"]
+[ext_resource type="PackedScene" uid="uid://cq8v7kniragju" path="res://Resources/Prototype/tab.tscn" id="3_he85y"]
+[ext_resource type="Script" path="res://Resources/single_squares_config_tab.gd" id="4_rpei5"]
+[ext_resource type="Script" path="res://Resources/single_triangular_config_tab.gd" id="5_hjs2c"]
+[ext_resource type="Script" path="res://Resources/single_honeycomb_config_tab.gd" id="6_ha8bg"]
+[ext_resource type="Script" path="res://Resources/single_squares2_tab.gd" id="7_0nse1"]
+
+[node name="single_player_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_36ids")
+script = ExtResource("2_owr67")
+
+[node name="config_box" type="CenterContainer" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="menu" type="VBoxContainer" parent="config_box"]
+layout_mode = 2
+
+[node name="no_guess" type="CheckButton" parent="config_box/menu"]
+unique_name_in_owner = true
+layout_mode = 2
+button_pressed = true
+text = "TK_no_guess"
+
+[node name="flag_error_prompt" type="CheckButton" parent="config_box/menu"]
+unique_name_in_owner = true
+layout_mode = 2
+button_pressed = true
+text = "TK_flag_error_prompt"
+
+[node name="mine_shape_box" type="HBoxContainer" parent="config_box/menu"]
+layout_mode = 2
+
+[node name="mine_shape_label" type="Label" parent="config_box/menu/mine_shape_box"]
+layout_mode = 2
+text = "TK_mine_shape"
+
+[node name="mine_shape" type="OptionButton" parent="config_box/menu/mine_shape_box"]
+unique_name_in_owner = true
+layout_mode = 2
+shortcut_in_tooltip = false
+
+[node name="tabs_title" type="Label" parent="config_box/menu"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "TK_mine_config"
+
+[node name="tabs" type="TabContainer" parent="config_box/menu"]
+unique_name_in_owner = true
+layout_mode = 2
+current_tab = 0
+clip_tabs = false
+tabs_visible = false
+
+[node name="squares" parent="config_box/menu/tabs" instance=ExtResource("3_he85y")]
+unique_name_in_owner = true
+layout_mode = 2
+script = ExtResource("4_rpei5")
+
+[node name="triangular" parent="config_box/menu/tabs" instance=ExtResource("3_he85y")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+script = ExtResource("5_hjs2c")
+
+[node name="honeycomb" parent="config_box/menu/tabs" instance=ExtResource("3_he85y")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+script = ExtResource("6_ha8bg")
+
+[node name="squares_2" parent="config_box/menu/tabs" instance=ExtResource("3_he85y")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+script = ExtResource("7_0nse1")
+
+[node name="title_box" type="MarginContainer" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+offset_bottom = 28.0
+grow_horizontal = 2
+
+[node name="title" type="Label" parent="title_box"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "TK_single_player"
+
+[node name="back_box" type="MarginContainer" parent="."]
+layout_mode = 0
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 104.0
+grow_vertical = 0
+
+[node name="back" type="Button" parent="back_box"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+text = "TK_back"
+
+[node name="accept_box" type="MarginContainer" parent="."]
+layout_mode = 0
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -126.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="accept" type="Button" parent="accept_box"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+text = "TK_accept"
+
+[connection signal="item_selected" from="config_box/menu/mine_shape_box/mine_shape" to="." method="_on_mine_shape_item_selected"]
+[connection signal="pressed" from="back_box/back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="accept_box/accept" to="." method="_on_accept_pressed"]

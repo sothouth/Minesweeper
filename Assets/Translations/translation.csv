@@ -1,0 +1,40 @@
+key,en,zh
+TK_mine_sweeper,mine sweeper,扫雷
+TK_single_player,single player,单人游戏
+TK_multi_player,multi player,多人游戏
+TK_quit_confirm,Sure you want to quit?,确定要退出吗？
+TK_config,config,设置
+TK_quit,quit,退出
+TK_accept,accept,确定
+TK_start,start,开始
+TK_cancel,cancel,取消
+TK_back,back,返回
+TK_restart,restart,重新开始
+TK_display_mode,display mode,显示模式
+TK_fullscreen,fullscreen,全屏
+TK_borderless,borderless,无边框全屏
+TK_windowed,windowed,窗口化
+TK_maximized,maximized,最大化
+TK_language,language,语言
+TK_The_changes_have_not_been_saved,The changes have not been saved"," sure you want to quit?,更改还没有被保存，确定要退出吗？
+TK_exit_and_save,exit and save,退出并保存
+TK_no_guess,no guess,无猜
+TK_flag_error_prompt,flag error prompt,旗帜错误提示
+TK_mine_shape,mine shape,雷区形状
+TK_mine_config,mine config,雷区设置
+TK_squares,squares,方形
+TK_triangular,triangular,三角形
+TK_honeycomb,honeycomb,蜂窝状
+TK_squares_2,squares 2,方形 2
+TK_squares_size_option,map size,地图尺寸
+TK_small,small,小
+TK_medium,medium,中
+TK_large,large,大
+TK_custom,custom,自定义
+TK_length,length,长度
+TK_width,width,宽度
+TK_mine_number,mene number,地雷数量
+TK_zoom,zoom,缩放
+TK_READY,READY,准备
+TK_DEAD,DEAD,失败
+TK_COMPLETED,COMPLETED,完成

@@ -1,0 +1,86 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdmcqaa2a6tcb"]
+
+[ext_resource type="Theme" uid="uid://crk82bkjei1ly" path="res://Assets/Themes/themeMain.tres" id="1_3ju6s"]
+[ext_resource type="Script" path="res://Resources/Prototype/single_game.gd" id="2_5hnnn"]
+
+[node name="single_game" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("1_3ju6s")
+script = ExtResource("2_5hnnn")
+
+[node name="camera" type="Camera2D" parent="."]
+unique_name_in_owner = true
+
+[node name="game_rect" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="ui" type="CanvasLayer" parent="."]
+
+[node name="score_panel" type="PanelContainer" parent="ui"]
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+theme = ExtResource("1_3ju6s")
+
+[node name="score_box" type="HBoxContainer" parent="ui/score_panel"]
+layout_mode = 2
+
+[node name="left_mid_bracket" type="Label" parent="ui/score_panel/score_box"]
+layout_mode = 2
+text = "["
+
+[node name="time" type="Label" parent="ui/score_panel/score_box"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="right_mid_bracket" type="Label" parent="ui/score_panel/score_box"]
+layout_mode = 2
+text = "]"
+
+[node name="flaged_label" type="Label" parent="ui/score_panel/score_box"]
+layout_mode = 2
+
+[node name="flaged" type="Label" parent="ui/score_panel/score_box"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="separator" type="Label" parent="ui/score_panel/score_box"]
+layout_mode = 2
+text = "/"
+
+[node name="mine_number" type="Label" parent="ui/score_panel/score_box"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="space" type="Control" parent="ui/score_panel/score_box"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="restart" type="Button" parent="ui/score_panel/score_box"]
+unique_name_in_owner = true
+layout_mode = 2
+shortcut_in_tooltip = false
+text = "TK_restart"
+
+[node name="quit" type="Button" parent="ui/score_panel/score_box"]
+unique_name_in_owner = true
+layout_mode = 2
+shortcut_in_tooltip = false
+text = "TK_quit"
+
+[node name="game_state_box" type="CenterContainer" parent="ui/score_panel"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="game_state" type="Label" parent="ui/score_panel/game_state_box"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[connection signal="pressed" from="ui/score_panel/score_box/restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="ui/score_panel/score_box/quit" to="." method="_on_quit_pressed"]

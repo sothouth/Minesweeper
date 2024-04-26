@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=3 uid="uid://ocx4xcmw58ba"]
+
+[ext_resource type="Script" path="res://Resources/main_menu.gd" id="1_nbn3c"]
+[ext_resource type="Theme" uid="uid://crk82bkjei1ly" path="res://Assets/Themes/themeMain.tres" id="2_hav1o"]
+
+[node name="mainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nbn3c")
+
+[node name="background" type="TextureRect" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="centerBox" type="CenterContainer" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_hav1o")
+
+[node name="menu" type="VBoxContainer" parent="centerBox"]
+layout_mode = 2
+
+[node name="single" type="Button" parent="centerBox/menu"]
+layout_mode = 2
+text = "TK_single_player"
+
+[node name="multi" type="Button" parent="centerBox/menu"]
+layout_mode = 2
+text = "TK_multi_player"
+
+[node name="config" type="Button" parent="centerBox/menu"]
+layout_mode = 2
+text = "TK_config"
+
+[node name="quit" type="Button" parent="centerBox/menu"]
+layout_mode = 2
+text = "TK_quit"
+
+[connection signal="pressed" from="centerBox/menu/single" to="." method="_on_single_pressed"]
+[connection signal="pressed" from="centerBox/menu/multi" to="." method="_on_multi_pressed"]
+[connection signal="pressed" from="centerBox/menu/config" to="." method="_on_config_pressed"]
+[connection signal="pressed" from="centerBox/menu/quit" to="." method="_on_quit_pressed"]

@@ -1,0 +1,100 @@
+[gd_scene load_steps=3 format=3 uid="uid://dryc8s5imypvs"]
+
+[ext_resource type="Theme" uid="uid://crk82bkjei1ly" path="res://Assets/Themes/themeMain.tres" id="1_b63q7"]
+[ext_resource type="Script" path="res://Resources/config_menu.gd" id="2_6o2p4"]
+
+[node name="configMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_b63q7")
+script = ExtResource("2_6o2p4")
+
+[node name="configBox" type="CenterContainer" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="menu" type="HSplitContainer" parent="configBox"]
+layout_mode = 2
+
+[node name="left" type="VBoxContainer" parent="configBox/menu"]
+layout_mode = 2
+
+[node name="screenLabel" type="Label" parent="configBox/menu/left"]
+layout_mode = 2
+text = "TK_display_mode"
+
+[node name="languageLabel" type="Label" parent="configBox/menu/left"]
+layout_mode = 2
+text = "TK_language"
+
+[node name="right" type="VBoxContainer" parent="configBox/menu"]
+layout_mode = 2
+
+[node name="screen" type="OptionButton" parent="configBox/menu/right"]
+unique_name_in_owner = true
+layout_mode = 2
+item_count = 3
+popup/item_0/text = "TK_fullscreen"
+popup/item_0/id = 4
+popup/item_1/text = "TK_borderless"
+popup/item_1/id = 3
+popup/item_2/text = "TK_windowed"
+popup/item_2/id = 0
+
+[node name="language" type="OptionButton" parent="configBox/menu/right"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="titleBox" type="MarginContainer" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="title" type="Label" parent="titleBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "TK_config"
+
+[node name="backBox" type="MarginContainer" parent="."]
+layout_mode = 0
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+
+[node name="back" type="Button" parent="backBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+text = "TK_back"
+
+[node name="acceptBox" type="MarginContainer" parent="."]
+layout_mode = 0
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="accept" type="Button" parent="acceptBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+disabled = true
+text = "TK_accept"
+
+[connection signal="item_selected" from="configBox/menu/right/screen" to="." method="_on_screen_item_selected"]
+[connection signal="item_selected" from="configBox/menu/right/language" to="." method="_on_language_item_selected"]
+[connection signal="pressed" from="backBox/back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="acceptBox/accept" to="." method="_on_accept_pressed"]

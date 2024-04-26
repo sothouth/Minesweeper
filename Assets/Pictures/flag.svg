@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="3.7041383mm"
+   height="5.5562468mm"
+   viewBox="0 0 3.7041382 5.5562467"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="squaresFlag.svg"
+   inkscape:export-filename="E:\project\picture\output.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="251.90679"
+     inkscape:cy="315.5464"
+     inkscape:window-width="1920"
+     inkscape:window-height="1013"
+     inkscape:window-x="1341"
+     inkscape:window-y="1032"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer3"
+     inkscape:showpageshadow="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid236"
+       originx="0"
+       originy="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <linearGradient
+       id="linearGradient2172"
+       inkscape:swatch="gradient">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop2168" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop2170" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3779"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop3777" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient1760"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop1758" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient1754"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop1752" />
+    </linearGradient>
+  </defs>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="squares"
+     inkscape:export-filename="icon.svg"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     transform="translate(-92.686882,-83.095711)">
+    <g
+       id="g10406">
+      <g
+         id="g10024">
+        <rect
+           style="fill:#fafafa;fill-opacity:1;stroke:none;stroke-width:0.278894;stroke-linecap:square;stroke-opacity:1"
+           id="rect7796"
+           width="0.52916664"
+           height="5.2916665"
+           x="92.686882"
+           y="83.360291" />
+        <rect
+           style="fill:#4b4b4b;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-linecap:square;stroke-opacity:1"
+           id="rect8006"
+           width="0.52916664"
+           height="0.26458332"
+           x="92.686882"
+           y="83.095711" />
+        <path
+           sodipodi:type="star"
+           style="fill:#fa0a0a;fill-opacity:1;stroke:none;stroke-width:0.264583;stroke-linecap:square;stroke-opacity:1"
+           id="path8216"
+           inkscape:flatsided="true"
+           sodipodi:sides="3"
+           sodipodi:cx="95.415215"
+           sodipodi:cy="83.581863"
+           sodipodi:r1="1.4205962"
+           sodipodi:r2="0.71029812"
+           sodipodi:arg1="2.0943951"
+           sodipodi:arg2="3.1415927"
+           inkscape:rounded="0"
+           inkscape:randomized="0"
+           d="m 94.704916,84.812136 0,-2.460545 2.130895,1.230272 z"
+           inkscape:transform-center-x="-0.52915545"
+           inkscape:transform-center-y="2.3321504e-06"
+           transform="matrix(1.4899846,0,0,1.2903646,-47.892847,-22.903283)" />
+      </g>
+    </g>
+  </g>
+</svg>

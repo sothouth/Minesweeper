@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cywleahvjdshb"]
+
+[ext_resource type="Script" path="res://Resources/confirm.gd" id="1_nbdg4"]
+
+[node name="confirm" type="ConfirmationDialog"]
+borderless = true
+ok_button_text = "TK_accept"
+cancel_button_text = "TK_cancel"
+script = ExtResource("1_nbdg4")
+
+[connection signal="size_changed" from="." to="." method="_on_need_center"]

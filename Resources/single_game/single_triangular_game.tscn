@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgww7b1gcoq1o"]
+
+[ext_resource type="PackedScene" uid="uid://bd688vrs30ors" path="res://Resources/Prototype/single_game.tscn" id="1_44rge"]
+[ext_resource type="Script" path="res://Resources/single_game/single_triangular_game.gd" id="2_xjshb"]
+
+[node name="single_triangular_game" instance=ExtResource("1_44rge")]
+script = ExtResource("2_xjshb")

@@ -1,0 +1,11 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://crk82bkjei1ly"]
+
+[ext_resource type="FontFile" uid="uid://ga4cr1p8vhcp" path="res://Assets/Fonts/ADOBEHEITISTD-REGULAR.OTF" id="1_48muj"]
+[ext_resource type="Texture2D" uid="uid://u2c6l1e7afb4" path="res://Assets/Pictures/checkButtonOff.svg" id="1_m20bv"]
+[ext_resource type="Texture2D" uid="uid://by40ftc317lkg" path="res://Assets/Pictures/checkButtonOn.svg" id="2_06rxf"]
+
+[resource]
+default_font = ExtResource("1_48muj")
+default_font_size = 25
+CheckButton/icons/checked = ExtResource("2_06rxf")
+CheckButton/icons/unchecked = ExtResource("1_m20bv")

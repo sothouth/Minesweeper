@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcglfim8dh5l7"]
+
+[ext_resource type="PackedScene" uid="uid://bdmcqaa2a6tcb" path="res://Resources/Prototype/single_game.tscn" id="1_0xnwb"]
+[ext_resource type="Script" path="res://Resources/single_game/single_squares_game.gd" id="2_nt52i"]
+
+[node name="single_squares_game" instance=ExtResource("1_0xnwb")]
+script = ExtResource("2_nt52i")
